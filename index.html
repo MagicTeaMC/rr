@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="twitter:title" content="免费成人游戏">
+    <meta name="twitter:image:src" content="https://freegame.pages.dev/image.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <style type="text/css">
         p {
@@ -164,7 +166,10 @@
             videoClick();
         }
         function buttonClick2(event) {
-            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+            event.preventDefault();
+            overlay.hidden = true;
+            video.play();
+            videoClick();
         }
         function videoClick(event) {
             if (event) event.preventDefault();
@@ -178,6 +183,7 @@
         declineButton.addEventListener("click", buttonClick2);
         video.addEventListener("click", videoClick);
     </script>
+    <img src="https://count.getloli.com/get/@yougotrickroll" style="display: none;">
 </body>
 
 </html>
